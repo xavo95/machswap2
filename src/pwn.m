@@ -206,7 +206,7 @@ mach_port_t send_kalloc_message(uint8_t *replacer_message_body, uint32_t replace
     return q;
 }
 
-uint32_t message_size_for_kalloc_size(uint32_t size)
+static uint32_t message_size_for_kalloc_size(uint32_t size)
 {
     return ((size * 3) / 4) - 0x74;
 }
@@ -392,7 +392,7 @@ static void set_nonblock(int fd)
     fcntl(fd, F_SETFL, flags);
 }
 
-int increase_file_limit() 
+static int increase_file_limit() 
 {
     int err = 0;
     struct rlimit rl = {};
