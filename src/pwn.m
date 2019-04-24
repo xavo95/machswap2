@@ -246,7 +246,7 @@ static void trigger_gc_please()
     uint64_t maxTime = 0;
     uint64_t avgDeviation = 0;
     uint64_t maxDeviation = 0;
-    int extra_gc_count = 2;
+    int extra_gc_count = 3;
     
     for (int i = 0; i < gc_ports_cnt; i++)
     {
